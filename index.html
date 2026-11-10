@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#104b38"><title>رفيق القرآن</title>
+<style>
+:root{--g:#145b43;--g2:#207957;--gold:#d8b65d;--bg:#f5f7f1;--paper:#fffdf6;--ink:#18372d;--muted:#71857b;--line:#e6ece5;--shadow:0 8px 26px #153d2b0c}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Tahoma,Arial,sans-serif;padding-bottom:88px}
+body.dark{--bg:#101b17;--paper:#1b2b24;--ink:#edf5ef;--muted:#a9b8ae;--line:#30443a;--shadow:none}
+header{padding:22px 18px 26px;color:white;background:radial-gradient(circle at 90% 0,#2c8a64,transparent 45%),linear-gradient(135deg,#0d3f2f,#17654a);border-radius:0 0 28px 28px;position:relative;overflow:hidden}
+header:after{content:"۞";position:absolute;left:18px;top:4px;font-size:80px;color:#ffffff13}
+.brand{display:flex;align-items:center;gap:10px}.logo{width:42px;height:42px;border:1px solid #e8cf83;border-radius:14px;display:grid;place-items:center;font-size:24px;color:#f4dfa1}
+h1{font-size:21px;margin:0}header p{margin:9px 0 0;color:#d7e8de;font-size:13px}
+main{max-width:760px;margin:auto;padding:12px 14px}
+.tabs{position:fixed;bottom:0;left:0;right:0;z-index:10;display:grid;grid-template-columns:repeat(5,1fr);padding:9px 5px calc(9px + env(safe-area-inset-bottom));background:var(--paper);border-top:1px solid var(--line);box-shadow:0 -5px 20px #00000008}
+.tabs button{border:0;background:none;color:var(--muted);font:inherit;font-size:11px;padding:5px 0;display:grid;gap:4px;justify-items:center}
+.tabs button b{font-size:20px;font-weight:normal}.tabs button.active{color:var(--g);font-weight:bold}
+body.dark .tabs button.active{color:#7bd2a6}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:19px;padding:16px;margin:10px 0;box-shadow:var(--shadow)}
+.hero{background:linear-gradient(130deg,#145b43,#207957);color:white;border:0;padding:19px}
+.hero .verse{font-family:serif;font-size:21px;line-height:1.9;color:#fff5d9;text-align:center;margin:9px 0}
+h2{font-size:17px;margin:0 0 12px}h3{font-size:14px;margin:0 0 8px}.muted{color:var(--muted);font-size:12px}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:9px}.stat{background:var(--bg);border-radius:14px;padding:13px}.stat strong{display:block;font-size:23px;color:var(--g);margin-top:5px}
+body.dark .stat strong{color:#7bd2a6}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.tile{border:1px solid var(--line);border-radius:15px;padding:15px;background:var(--paper);text-align:right;color:var(--ink);font:inherit;min-height:84px}
+.tile .ico{font-size:23px;display:block;margin-bottom:8px}
+button,.btn,select,input{font:inherit}.btn{border:0;border-radius:12px;padding:12px 15px;background:var(--g);color:white;font-weight:bold;cursor:pointer}.btn.secondary{background:#e8f0e9;color:var(--g)}body.dark .btn.secondary{background:#263c31;color:#d7f1e1}
+.btn.full{width:100%}.btn.small{padding:8px 11px;font-size:12px}
+select,input{width:100%;border:1px solid var(--line);border-radius:11px;padding:12px;background:var(--paper);color:var(--ink);margin:6px 0 12px}
+label{font-size:12px;color:var(--muted)}.row{display:flex;align-items:center;gap:9px}.row>*{flex:1}
+.surah{display:flex;align-items:center;justify-content:space-between;padding:13px 4px;border-bottom:1px solid var(--line);cursor:pointer}
+.surah:last-child{border:0}.num{width:30px;height:30px;border-radius:10px;background:var(--bg);display:grid;place-items:center;color:var(--g);font-size:12px}
+.ayah{font-family:serif;font-size:23px;line-height:2.15;text-align:center;padding:16px 7px;border-bottom:1px dashed var(--line)}
+.ayah:last-child{border:0}.ayah small{font:12px Tahoma;color:var(--g)}
+.progress{height:9px;background:var(--line);border-radius:9px;overflow:hidden}.progress span{display:block;height:100%;background:linear-gradient(90deg,#27875e,#d8b65d);width:0}
+.check{display:flex;gap:9px;align-items:center;padding:11px 0;border-bottom:1px solid var(--line);font-size:13px}.check input{width:18px;margin:0;accent-color:var(--g)}
+.hidden{display:none!important}.center{text-align:center}.gold{color:var(--gold)}.notice{background:#f8f0d9;color:#685322;border-radius:12px;padding:11px;font-size:12px;line-height:1.7}
+body.dark .notice{background:#3b3420;color:#f1dfa7}
+</style></head>
+<body>
+<header><div class="brand"><div class="logo">۞</div><div><h1>رفيق القرآن</h1><div style="font-size:11px;color:#d9eade;margin-top:3px">رفيقك في الحفظ والمراجعة</div></div></div><p>وَرَتِّلِ الْقُرْآنَ تَرْتِيلًا</p></header>
+<main>
+<section id="home" class="page">
+<div class="card hero"><div class="muted" style="color:#d8e9df">بسم الله نبدأ</div><div class="verse">اللَّهُمَّ اجْعَلِ الْقُرْآنَ رَبِيعَ قُلُوبِنَا</div><div class="center" style="font-size:12px;color:#e0eee5">رحلة صغيرة كل يوم، وأثر عظيم بإذن الله</div></div>
+<div class="stats"><div class="stat"><span class="muted">جلسات الحفظ</span><strong id="homeSessions">0</strong></div><div class="stat"><span class="muted">آيات مسجلة</span><strong id="homeVerses">0</strong></div></div>
+<div class="card"><div class="row"><div><h2>هدفك اليومي</h2><div class="muted">اختر هدفاً مناسباً لك</div></div><span class="gold">✦</span></div><select id="goal" onchange="saveGoal()"><option value="3">3 آيات يومياً</option><option value="5">5 آيات يومياً</option><option value="10">10 آيات يومياً</option><option value="15">15 آية يومياً</option></select><div class="progress"><span id="goalBar"></span></div><p class="muted" id="goalProgress">ابدأ أول جلسة حفظ اليوم</p></div>
+<h2 style="padding:8px 2px">ماذا تريد أن تفعل؟</h2><div class="grid2">
+<button class="tile" onclick="show('quran')"><span class="ico">📖</span>قراءة القرآن</button>
+<button class="tile" onclick="show('memorize')"><span class="ico">🧠</span>جلسة حفظ</button>
+<button class="tile" onclick="show('review')"><span class="ico">🔁</span>مراجعة المحفوظ</button>
+<button class="tile" onclick="show('progress')"><span class="ico">📊</span>إنجازاتي</button></div>
+<div class="card"><h3>آخر موضع وصلت إليه</h3><p id="lastPosition" class="muted">لم تحفظ موضع قراءة بعد.</p><button class="btn secondary small" onclick="resume()">متابعة القراءة</button></div>
+</section>
+<section id="quran" class="page hidden">
+<div class="card"><h2>المصحف الشريف</h2><p class="muted">اختر سورة لعرض آياتها والاستماع إلى التلاوة.</p><input id="search" placeholder="ابحث عن سورة..." oninput="filterSurahs()"><div id="surahList" class="muted">جارٍ تحميل قائمة السور...</div></div>
+<div class="card hidden" id="reader"><div class="row"><div><h2 id="readerTitle">السورة</h2><div class="muted" id="readerMeta"></div></div><button class="btn secondary small" onclick="bookmark()">☆ حفظ الموضع</button></div><div class="row"><button class="btn small" onclick="play()">▶ استماع</button><button class="btn secondary small" onclick="stop()">إيقاف</button></div><div id="ayahs"></div></div>
+</section>
+<section id="memorize" class="page hidden">
+<div class="card"><h2>جلسة الحفظ</h2><p class="muted">اختر السورة وحدد هدف الجلسة، ثم اتبع خطوات الحفظ.</p><label>السورة</label><select id="memorizeSurah"></select><div class="row"><div><label>من الآية</label><input id="fromAyah" type="number" min="1" value="1"></div><div><label>إلى الآية</label><input id="toAyah" type="number" min="1" value="5"></div></div><label>عدد مرات التكرار</label><div class="row"><button class="btn secondary" onclick="changeRepeat(-1)">−</button><strong class="center" id="repeatCount">5 مرات</strong><button class="btn secondary" onclick="changeRepeat(1)">+</button></div></div>
+<div class="card"><h2>خطوات تثبيت الحفظ</h2><label class="check"><input type="checkbox"> أقرأ الآيات من المصحف بتأنٍ</label><label class="check"><input type="checkbox"> أستمع إلى التلاوة الصحيحة</label><label class="check"><input type="checkbox"> أكرر الآيات حسب العدد المحدد</label><label class="check"><input type="checkbox"> أسمّع الآيات دون النظر</label><button class="btn full" onclick="saveSession()">✓ إتمام جلسة الحفظ</button><p id="saveMessage" class="muted center"></p></div>
+</section>
+<section id="review" class="page hidden">
+<div class="card"><h2>مراجعة المحفوظات</h2><p>المراجعة المنتظمة تساعد على تثبيت ما حفظته.</p><div class="notice">ابدأ بمراجعة آخر ما حفظته، ثم انتقل إلى المحفوظ الأقدم. لا تتعجل، واجعل إتقان الحفظ أهم من سرعة الإنجاز.</div><div style="height:12px"></div><label class="check"><input type="checkbox"> راجعت محفوظ الأمس</label><label class="check"><input type="checkbox"> سمّعت دون النظر إلى المصحف</label><label class="check"><input type="checkbox"> حددت الآيات التي تحتاج إلى إعادة</label><button class="btn full" onclick="reviewDone()">إكمال المراجعة</button><p id="reviewMessage" class="muted center"></p></div>
+</section>
+<section id="progress" class="page hidden">
+<div class="card"><h2>إنجازاتي</h2><div class="stats"><div class="stat"><span class="muted">جلسات الحفظ</span><strong id="sessions">0</strong></div><div class="stat"><span class="muted">مجموع الآيات</span><strong id="totalVerses">0</strong></div></div><div style="height:15px"></div><h3>التقدم نحو ختم حفظ القرآن</h3><div class="progress"><span id="overallBar"></span></div><p class="muted" id="overallText">0 من 6236 آية مسجلة</p><button class="btn secondary full" onclick="exportData()">تصدير نسخة من تقدمي</button></div>
+<div class="card"><h3>تنبيه مهم</h3><p class="muted">تُحفظ إحصائياتك محلياً على هذا الهاتف في هذه النسخة. حذف بيانات التطبيق أو تغيير الجهاز قد يؤدي إلى فقدانها؛ استخدم التصدير للاحتفاظ بنسخة.</p></div>
+</section>
+<section id="settings" class="page hidden"><div class="card"><h2>الإعدادات</h2><label class="check"><input id="darkToggle" type="checkbox" onchange="toggleDark()"> تفعيل الوضع الليلي</label><p class="muted">اللغة: العربية</p><p class="muted">الإصدار التجريبي 1.1.0</p></div></section>
+</main>
+<nav class="tabs">
+<button class="active" data-page="home" onclick="show('home')"><b>⌂</b>الرئيسية</button>
+<button data-page="quran" onclick="show('quran')"><b>▤</b>المصحف</button>
+<button data-page="memorize" onclick="show('memorize')"><b>✧</b>الحفظ</button>
+<button data-page="progress" onclick="show('progress')"><b>▥</b>تقدمي</button>
+<button data-page="settings" onclick="show('settings')"><b>⚙</b>الإعدادات</button>
+</nav>
+<script>
+const defaultState={sessions:0,total:0,goal:5,today:0,repeat:5};
+let state=Object.assign(defaultState,JSON.parse(localStorage.getItem('rafiqState')||'{}'));
+let surahs=[],current=null,audio=null;
+function save(){localStorage.setItem('rafiqState',JSON.stringify(state));renderStats()}
+function show(id){document.querySelectorAll('.page').forEach(p=>p.classList.toggle('hidden',p.id!==id));document.querySelectorAll('.tabs button').forEach(b=>b.classList.toggle('active',b.dataset.page===id));if(id==='quran'&&!surahs.length)loadSurahs()}
+function renderStats(){['homeSessions','sessions'].forEach(id=>document.getElementById(id).textContent=state.sessions);['homeVerses','totalVerses'].forEach(id=>document.getElementById(id).textContent=state.total);document.getElementById('goal').value=state.goal;let pct=Math.min(100,state.today/state.goal*100);document.getElementById('goalBar').style.width=pct+'%';document.getElementById('goalProgress').textContent=state.today+' من '+state.goal+' آيات في هدف اليوم';document.getElementById('overallBar').style.width=Math.min(100,state.total/6236*100)+'%';document.getElementById('overallText').textContent=state.total+' من 6236 آية مسجلة';}
+function saveGoal(){state.goal=+document.getElementById('goal').value;save()}
+function changeRepeat(n){state.repeat=Math.max(1,Math.min(30,state.repeat+n));document.getElementById('repeatCount').textContent=state.repeat+' مرات';save()}
+function saveSession(){let a=+document.getElementById('fromAyah').value,b=+document.getElementById('toAyah').value;if(a<1||b<a||b-a>100){alert('تحقق من نطاق الآيات.');return}let count=b-a+1;state.sessions++;state.total+=count;state.today+=count;save();document.getElementById('saveMessage').textContent='أحسنت! تم تسجيل '+count+' آيات في تقدمك.';localStorage.setItem('rafiqLast',document.getElementById('memorizeSurah').selectedOptions[0]?.text+'، الآية '+b)}
+function reviewDone(){document.getElementById('reviewMessage').textContent='أحسنت، تم إنهاء جلسة المراجعة. واصل الاستمرار.'}
+function toggleDark(){document.body.classList.toggle('dark',document.getElementById('darkToggle').checked);localStorage.setItem('rafiqDark',document.getElementById('darkToggle').checked?'1':'0')}
+async function loadSurahs(){try{let r=await fetch('https://api.alquran.cloud/v1/surah');let j=await r.json();if(j.code!==200)throw 0;surahs=j.data;renderSurahs(surahs);document.getElementById('memorizeSurah').innerHTML=surahs.map(s=>`<option value="${s.number}">${s.name}</option>`).join('')}catch(e){document.getElementById('surahList').textContent='تعذر الاتصال بمصدر القرآن. تحقق من الإنترنت ثم أعد المحاولة.'}}
+function renderSurahs(list){document.getElementById('surahList').innerHTML=list.map(s=>`<div class="surah" onclick="openSurah(${s.number})"><span class="row" style="gap:10px"><span class="num">${s.number}</span><span>${s.name}<br><small>${s.revelationType==='Meccan'?'مكية':'مدنية'}</small></span></span><small>${s.numberOfAyahs} آية ←</small></div>`).join('')}
+function filterSurahs(){let q=document.getElementById('search').value.trim();renderSurahs(surahs.filter(s=>s.name.includes(q)||String(s.number)===q))}
+async function openSurah(n){try{let r=await fetch('https://api.alquran.cloud/v1/surah/'+n);let j=await r.json();if(j.code!==200)throw 0;current=j.data;document.getElementById('reader').classList.remove('hidden');document.getElementById('readerTitle').textContent=current.name;document.getElementById('readerMeta').textContent=current.numberOfAyahs+' آية';document.getElementById('ayahs').innerHTML=current.ayahs.map(a=>`<div class="ayah">${a.text} <small>۞ ${a.numberInSurah}</small></div>`).join('');localStorage.setItem('rafiqCurrent',n);document.getElementById('reader').scrollIntoView({behavior:'smooth'})}catch(e){alert('تعذر تحميل السورة. تحقق من اتصال الإنترنت.')}}
+function play(){if(!current)return;stop();audio=new Audio('https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/'+current.number+'.mp3');audio.play().catch(()=>alert('تعذر تشغيل التلاوة حالياً.'))}
+function stop(){if(audio){audio.pause();audio.currentTime=0;audio=null}}
+function bookmark(){if(!current)return;localStorage.setItem('rafiqLast','سورة '+current.name);document.getElementById('lastPosition').textContent='سورة '+current.name;alert('تم حفظ السورة كآخر موضع قراءة.')}
+function resume(){let n=+(localStorage.getItem('rafiqCurrent')||1);show('quran');openSurah(n)}
+function exportData(){let blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'});let a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='rafiq-quran-progress.json';a.click();URL.revokeObjectURL(a.href)}
+document.getElementById('lastPosition').textContent=localStorage.getItem('rafiqLast')||'لم تحفظ موضع قراءة بعد.';document.getElementById('darkToggle').checked=localStorage.getItem('rafiqDark')==='1';document.body.classList.toggle('dark',document.getElementById('darkToggle').checked);document.getElementById('repeatCount').textContent=state.repeat+' مرات';renderStats();loadSurahs();
+</script></body></html>
